@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node index"
   },
+  "preferGlobal": true,
+  "bin": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/zacanger/zacanger.git"
