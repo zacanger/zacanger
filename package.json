@@ -1,0 +1,30 @@
+{
+  "name": "zacanger",
+  "version": "0.1.0",
+  "description": "zacanger",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zacanger/zacanger.git"
+  },
+  "keywords": [
+    "",
+    ""
+  ],
+  "author": {
+    "name": "Zac Anger",
+    "email": "zac@zacanger.com",
+    "url": "http://zacanger.com"
+  },
+  "homepage": "https://github.com/zacanger/zacanger#readme",
+  "bugs": "https://github.com/zacanger/zacanger/issues",
+  "license": "WTFPL",
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
+
