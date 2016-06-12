@@ -166,37 +166,37 @@ const zacanger = {
     ]
   }
 
-, "relevant experience": [
+, experience : [
     {
-      name: "Jane.com",
-      "position": "Front-end developer",
-      "dates": "2016-Present",
-      "description": "Buildin' stuffz!",
-      "technologies": "React, CSS, *nix, Typescript, Koa, Express, Purescript"
+      name   : "Jane.com",
+      position: "Front-end developer",
+      dates: "2016-Present",
+      description: "Buildin' stuffz!",
+      technologies: "React, CSS, *nix, Typescript, Koa, Express, Purescript"
     },{
       name: "DevMountain",
-      "position": "Mentor and Junior Developer",
-      "dates": "2016",
-      "description": "Mentored group of new devs; planned and carried out lectures; maintained curriculum; worked on internal projects",
-      "technologies": "Node, Express, Angular, Chromium (extensions), CSS and preprocessors, MongoDB and Mongoose, MySQL, build systems, Linux."
+      position: "Mentor and Junior Developer",
+      dates: "2016",
+      description: "Mentored group of new devs; planned and carried out lectures; maintained curriculum; worked on internal projects",
+      technologies: "Node, Express, Angular, Chromium (extensions), CSS and preprocessors, MongoDB and Mongoose, MySQL, build systems, Linux."
     },{
       name: "Mickey's Wholesale Pizza",
-      "position": "Web Developer",
-      "dates": "2014-2015",
-      "description": "Full revamp of wholesale foods company's web presence.",
-      "technologies": "HTML, CSS, JavaScript, jQuery, Twitter Bootstrap, image manipulation."
+      position: "Web Developer",
+      dates: "2014-2015",
+      description: "Full revamp of wholesale foods company's web presence.",
+      technologies: "HTML, CSS, JavaScript, jQuery, Twitter Bootstrap, image manipulation."
     },{
       name: "RLH Guitars",
-      "position": "Venue management, recording engineer",
-      "dates": "2005-2008",
-      "description": "Ran live music venue; lead engineer at in-house recording studio.",
-      "technologies": "Windows, Mac, and Linux workstations and servers; pro audio hardware and software."
+      position: "Venue management, recording engineer",
+      dates: "2005-2008",
+      description: "Ran live music venue; lead engineer at in-house recording studio.",
+      technologies: "Windows, Mac, and Linux workstations and servers; pro audio hardware and software."
     },{
       name: "York County Library System",
-      "position": "Volunteer",
-      "dates": "2001-2005",
-      "description": "Worked with catalogues, DDS, customer service.",
-      "technologies": "Various library systems including bespoke software and national systems."
+      position: "Volunteer",
+      dates: "2001-2005",
+      description: "Worked with catalogues, DDS, customer service.",
+      technologies: "Various library systems including bespoke software and national systems."
     }
   ]
 
