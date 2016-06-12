@@ -24,7 +24,6 @@ const zacanger = {
   , 'open source supporter'
   , 'node fanboi'
   ]
-}
 
 , description : `
   I'm an enthusiastic, always-curious individual with a varied history in a
@@ -214,3 +213,4 @@ const zacanger = {
   }
 
 
+}
