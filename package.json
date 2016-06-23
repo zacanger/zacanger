@@ -1,32 +1,30 @@
 {
   "name": "zacanger",
-  "version": "0.1.1",
   "description": "zacanger",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index"
-  },
-  "preferGlobal": true,
-  "bin": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/zacanger/zacanger.git"
-  },
-  "keywords": [
-    "",
-    ""
-  ],
+  "version": "0.1.2",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
     "url": "http://zacanger.com"
   },
-  "homepage": "https://github.com/zacanger/zacanger#readme",
-  "bugs": "https://github.com/zacanger/zacanger/issues",
   "license": "WTFPL",
-  "dependencies": {
+  "main": "index.js",
+  "preferGlobal": true,
+  "bin": "index.js",
+  "scripts": {
+    "start": "node index"
   },
-  "devDependencies": {
-  }
+  "homepage": "https://github.com/zacanger/zacanger#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zacanger/zacanger.git"
+  },
+  "bugs": "https://github.com/zacanger/zacanger/issues",
+  "keywords": [
+    "cv",
+    "resume",
+    "zacanger"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
 }
-
