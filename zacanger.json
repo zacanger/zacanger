@@ -159,7 +159,8 @@
       "ruby",
       "python",
       "haskell",
-      "soft skills"
+      "soft skills",
+      "aws"
     ]
   },
 
@@ -213,4 +214,3 @@
   ]
 
 }
-

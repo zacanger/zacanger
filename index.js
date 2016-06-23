@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 
 const
-  path = require('path')
-, fs   = require('fs')
-, me   = path.resolve(__dirname, 'zacanger.json')
+  fs   = require('fs')
 , out  = process.stdout
+, path = require('path')
+, me   = path.resolve(__dirname, 'zacanger.json')
 
 fs.createReadStream(me).pipe(out)
-
