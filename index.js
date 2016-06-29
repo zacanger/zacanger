@@ -35,10 +35,8 @@ const col = str => {
   return `\u001b[38;5;${colour}m${str}\u001b[0m`
 }
 
-sin.on('data', c => {
-  c.toString().split('').map(w => {
-    out.write(col(w))
-  })
-})
+// const z = JSON.stringify(JSON.parse(fs.readFileSync(me)), null, 2)
+const z = fs.readFileSync(me)
 
-fs.createReadStream(me).pipe(sin)
+const s = z.toString().split('\n').map(c => out.write(col(c)))
+
