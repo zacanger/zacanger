@@ -7,10 +7,8 @@ const
 , path = require('path')
 , me   = path.resolve(__dirname, 'zacanger.json')
 
-
 function gencolours() {
   const colours = []
-
   for (let i = 0; i < (6 * 7); i++) {
     const
       pi3 = Math.floor(Math.PI / 3)

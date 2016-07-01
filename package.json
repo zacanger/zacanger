@@ -1,7 +1,7 @@
 {
   "name": "zacanger",
   "description": "zacanger",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
@@ -14,7 +14,7 @@
   "scripts": {
     "start": "node index"
   },
-  "homepage": "https://github.com/zacanger/zacanger#readme",
+  "homepage": "http://zacanger.com/cv",
   "repository": {
     "type": "git",
     "url": "https://github.com/zacanger/zacanger.git"
