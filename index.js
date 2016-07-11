@@ -33,4 +33,11 @@ const col = str => {
   return `\u001b[38;5;${colour}m${str}\u001b[0m`
 }
 
-fs.readFileSync(me).toString().split('\n').map(a => out.write(col(a) + '\n'))
+if (process.argv[2]) {
+  const arg = process.argv[2]
+  if (arg === '-r' || arg === '--raw') {
+    fs.createReadStream(me).pipe(out)
+  }
+} else {
+  fs.readFileSync(me).toString().split('\n').map(a => out.write(col(a) + '\n'))
+}
