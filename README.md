@@ -1,8 +1,13 @@
 # <http://zacanger.com/cv>
 
-`npm i -g zacanger`, then `zacanger`
+installation: `npm i -g zacanger`
 
-also `zacanger -r` for raw, to pipe or redirect to a file or another program
-(example: `zacanger -r | jq .`)
+```shell
+  zacanger      # writes json in colour to your term
+  zacanger -r   # writes raw json (for redirection or pipe)
+  zacanger -h   # this help message
+                # example:
+  zacanger -r | jq .projects[3].url
+```
 
 using functions from [rainbowify](https://github.com/maxogden/rainbowify) for colors
