@@ -5,11 +5,10 @@
 const
   fs   = require('fs')
 , out  = process.stdout
-, sin  = process.stdin
 , path = require('path')
 , me   = path.resolve(__dirname, 'zacanger.json')
 
-function gencolors() {
+const gencolors = () => {
   const colors = []
   for (let i = 0; i < (6 * 7); i++) {
     const
@@ -34,14 +33,14 @@ const col = str => {
 }
 
 const help = () =>
-  out.write(`
+  out.write(`\x1b[36m
   zacanger      # writes json in colour to your term
   zacanger -r   # writes raw json (for redirection or pipe)
   zacanger -h   # this help message
                 # example:
   zacanger -r | jq .projects[3].url
 
-`)
+\x1b[0m`)
 
 const go = () =>
   fs.readFileSync(me).toString().split('\n').map(a =>
@@ -51,11 +50,8 @@ if (process.argv[2]) {
   const arg = process.argv[2]
   if (arg === '-r' || arg === '--raw') {
     return fs.createReadStream(me).pipe(out)
-  }
-  if (arg === '-h' || arg === '--help') {
-    return help()
   } else {
-    return go()
+    return help()
   }
 } else {
   return go()

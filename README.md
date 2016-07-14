@@ -7,7 +7,7 @@ installation: `npm i -g zacanger`
   zacanger -r   # writes raw json (for redirection or pipe)
   zacanger -h   # this help message
                 # example:
-  zacanger -r | jq .projects[3].url
+  zacanger -r | jq .projects[0].description
 ```
 
 using functions from [rainbowify](https://github.com/maxogden/rainbowify) for colors
