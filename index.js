@@ -67,6 +67,7 @@ if (process.argv[2]) {
       return version()
       break
     case 'names':
+    case 'name':
       console.log(fl.names)
       break
     case 'status':
