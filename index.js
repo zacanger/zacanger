@@ -7,6 +7,7 @@ const
 , out  = process.stdout
 , path = require('path')
 , me   = path.resolve(__dirname, 'zacanger.json')
+, v    = require('./package.json').version
 
 const gencolors = () => {
   const colors = []
@@ -42,6 +43,9 @@ const help = () =>
 
 \x1b[0m`)
 
+const version = () =>
+  out.write(`\x1b[33mzacanger version ${v}\x1b[0m`)
+
 const go = () =>
   fs.readFileSync(me).toString().split('\n').map(a =>
     out.write(col(a) + '\n'))
@@ -50,7 +54,11 @@ if (process.argv[2]) {
   const arg = process.argv[2]
   if (arg === '-r' || arg === '--raw') {
     return fs.createReadStream(me).pipe(out)
-  } else {
+  }
+  if (arg === '-v' || arg === '--version') {
+    return version()
+  }
+  else {
     return help()
   }
 } else {
