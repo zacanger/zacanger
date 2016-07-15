@@ -6,8 +6,9 @@ const
   fs   = require('fs')
 , out  = process.stdout
 , path = require('path')
+, fl   = require('./zacanger.json')
 , me   = path.resolve(__dirname, 'zacanger.json')
-, v    = require('./package.json').version
+, pkg  = require('./package.json')
 
 const gencolors = () => {
   const colors = []
@@ -38,13 +39,17 @@ const help = () =>
   zacanger      # writes json in colour to your term
   zacanger -r   # writes raw json (for redirection or pipe)
   zacanger -h   # this help message
+  zacanger blog # blog link
+  zacanger name # names
+  zacanger url  # website
+  zacanger work # projects
                 # example:
   zacanger -r | jq .projects[3].url
 
 \x1b[0m`)
 
 const version = () =>
-  out.write(`\x1b[33mzacanger version ${v}\x1b[0m`)
+  out.write(`\x1b[33mzacanger version ${pkg.version}\x1b[0m`)
 
 const go = () =>
   fs.readFileSync(me).toString().split('\n').map(a =>
@@ -52,15 +57,40 @@ const go = () =>
 
 if (process.argv[2]) {
   const arg = process.argv[2]
-  if (arg === '-r' || arg === '--raw') {
-    return fs.createReadStream(me).pipe(out)
-  }
-  if (arg === '-v' || arg === '--version') {
-    return version()
-  }
-  else {
-    return help()
-  }
+  switch (arg) {
+    case '-r':
+    case '--raw':
+      return fs.createReadStream(me).pipe(out)
+      break
+    case '-v':
+    case '--version':
+      return version()
+      break
+    case 'names':
+      console.log(fl.names)
+      break
+    case 'status':
+    case 'employed':
+      console.log(fl.status)
+      break
+    case 'website':
+    case 'url':
+      console.log(fl.website)
+      break
+    case 'blog':
+    case 'writing':
+      console.log(fl.writing)
+      break
+    case 'projects':
+    case 'work':
+      console.log(fl.projects)
+      break
+    case 'links':
+      console.log(fl.links)
+      break
+    default:
+      return help()
+      }
 } else {
   return go()
 }
