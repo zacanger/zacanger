@@ -7,8 +7,24 @@ const
 , out  = process.stdout
 , path = require('path')
 , fl   = require('./zacanger.json')
-, me   = path.resolve(__dirname, 'zacanger.json')
 , pkg  = require('./package.json')
+, me   = path.resolve(__dirname, 'zacanger.json')
+, log  = i  => console.log(i)
+, go   = () =>
+  fs.readFileSync(me).toString().split('\n').map(a =>
+    out.write(col(a) + '\n'))
+
+const help = `\x1b[36m
+  zacanger      # writes json in colour to your term
+  zacanger -r   # writes raw json (for redirection or pipe)
+  zacanger -h   # this help message
+  zacanger -b   # blog link
+  zacanger -n   # names
+  zacanger -u   # website
+  zacanger -p   # projects
+                # example:
+  zacanger -r | jq .projects[3].url
+\x1b[0m`
 
 const gencolors = () => {
   const colors = []
@@ -27,71 +43,57 @@ const gencolors = () => {
 const rainbowColors = gencolors()
 
 let colorIndex = 0
-
 const col = str => {
   const color = rainbowColors[colorIndex % rainbowColors.length]
   colorIndex += 1
   return `\u001b[38;5;${color}m${str}\u001b[0m`
 }
 
-const help = () =>
-  out.write(`\x1b[36m
-  zacanger      # writes json in colour to your term
-  zacanger -r   # writes raw json (for redirection or pipe)
-  zacanger -h   # this help message
-  zacanger blog # blog link
-  zacanger name # names
-  zacanger url  # website
-  zacanger work # projects
-                # example:
-  zacanger -r | jq .projects[3].url
-
-\x1b[0m`)
-
-const version = () =>
-  out.write(`\x1b[33mzacanger version ${pkg.version}\x1b[0m`)
-
-const go = () =>
-  fs.readFileSync(me).toString().split('\n').map(a =>
-    out.write(col(a) + '\n'))
-
 if (process.argv[2]) {
   const arg = process.argv[2]
   switch (arg) {
     case '-r':
     case '--raw':
+    case 'raw':
       return fs.createReadStream(me).pipe(out)
       break
     case '-v':
     case '--version':
-      return version()
+    case 'version':
+      log(`zacanger version ${pkg.version}`)
       break
+    case '-n':
     case 'names':
     case 'name':
-      console.log(fl.names)
+      log(fl.names)
       break
+    case '-s':
     case 'status':
     case 'employed':
-      console.log(fl.status)
+      log(fl.status)
       break
+    case '-w':
     case 'website':
     case 'url':
-      console.log(fl.website)
+      log(fl.website)
       break
+    case '-b':
     case 'blog':
     case 'writing':
-      console.log(fl.writing)
+      log(fl.writing)
       break
+    case '-p':
     case 'projects':
     case 'work':
-      console.log(fl.projects)
+      log(fl.projects)
       break
+    case '-l':
     case 'links':
-      console.log(fl.links)
+      log(fl.links)
       break
     default:
-      return help()
-      }
+      log(help)
+    }
 } else {
   return go()
 }
