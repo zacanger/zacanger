@@ -10,9 +10,6 @@ const
 , pkg  = require('./package.json')
 , me   = path.resolve(__dirname, 'zacanger.json')
 , log  = i  => console.log(i)
-, go   = () =>
-  fs.readFileSync(me).toString().split('\n').map(a =>
-    out.write(col(a) + '\n'))
 
 const help = `\x1b[36m
   zacanger      # writes json in colour to your term
@@ -48,6 +45,10 @@ const col = str => {
   colorIndex += 1
   return `\u001b[38;5;${color}m${str}\u001b[0m`
 }
+
+const go = () =>
+  fs.readFileSync(me).toString().split('\n').map(a =>
+    out.write(col(a) + '\n'))
 
 if (process.argv[2]) {
   const arg = process.argv[2]
