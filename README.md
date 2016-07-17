@@ -11,7 +11,7 @@ installation: `npm i -g zacanger`
   zacanger -u   # website
   zacanger -p   # projects
                 # example:
-  zacanger -r | jq .projects[3].url
+  zacanger -r | jq .projects[4].url
 ```
 
 using functions from [rainbowify](https://github.com/maxogden/rainbowify) for colors

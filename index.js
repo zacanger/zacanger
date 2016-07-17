@@ -20,7 +20,7 @@ const help = `\x1b[36m
   zacanger -u   # website
   zacanger -p   # projects
                 # example:
-  zacanger -r | jq .projects[3].url
+  zacanger -r | jq .projects[4].url
 \x1b[0m`
 
 const gencolors = () => {
