@@ -6,21 +6,22 @@ const
   fs   = require('fs')
 , out  = process.stdout
 , path = require('path')
-, fl   = require('./zacanger.json')
 , pkg  = require('./package.json')
-, me   = path.resolve(__dirname, 'zacanger.json')
+, t    = pkg.name
+, fl   = require(`./${t}.json`)
+, me   = path.resolve(__dirname, `${t}.json`)
 , log  = i  => console.log(i)
 
 const help = `\x1b[36m
-  zacanger      # writes json in colour to your term
-  zacanger -r   # writes raw json (for redirection or pipe)
-  zacanger -h   # this help message
-  zacanger -b   # blog link
-  zacanger -n   # names
-  zacanger -u   # website
-  zacanger -p   # projects
+  ${t}      # writes json in colour to your term
+  ${t} -r   # writes raw json (for redirection or pipe)
+  ${t} -h   # this help message
+  ${t} -b   # blog link
+  ${t} -n   # names
+  ${t} -u   # website
+  ${t} -p   # projects
                 # example:
-  zacanger -r | jq .projects[4].url
+  ${t} -r | jq .projects[4].url
 \x1b[0m`
 
 const gencolors = () => {
@@ -61,7 +62,7 @@ if (process.argv[2]) {
     case '-v':
     case '--version':
     case 'version':
-      log(`zacanger version ${pkg.version}`)
+      log(`${t} version ${pkg.version}`)
       break
     case '-n':
     case 'names':

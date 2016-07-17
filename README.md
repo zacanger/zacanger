@@ -14,4 +14,7 @@ installation: `npm i -g zacanger`
   zacanger -r | jq .projects[4].url
 ```
 
+to do something similar for yourself, just fork it and replace `zacanger.json` with
+your own content, and change the name in `package.json`.
+
 using functions from [rainbowify](https://github.com/maxogden/rainbowify) for colors

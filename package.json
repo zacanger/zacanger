@@ -1,7 +1,7 @@
 {
   "name": "zacanger",
-  "description": "zacanger",
-  "version": "0.1.19",
+  "description": "my cv, in json, in colour, in your terminal",
+  "version": "0.1.20",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
