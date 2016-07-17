@@ -4,13 +4,14 @@
 
 const
   fs   = require('fs')
-, out  = process.stdout
 , path = require('path')
+, out  = process.stdout
+, arg  = process.argv[2]
 , pkg  = require('./package.json')
 , t    = pkg.name
 , fl   = require(`./${t}.json`)
 , me   = path.resolve(__dirname, `${t}.json`)
-, log  = i  => console.log(i)
+, log  = a => console.log(a)
 
 const help = `\x1b[36m
   ${t}      # writes json in colour to your term
@@ -51,8 +52,7 @@ const go = () =>
   fs.readFileSync(me).toString().split('\n').map(a =>
     out.write(col(a) + '\n'))
 
-if (process.argv[2]) {
-  const arg = process.argv[2]
+if (arg) {
   switch (arg) {
     case '-r':
     case '--raw':
