@@ -12,6 +12,7 @@ const
 , fl   = require(`./${t}.json`)
 , me   = path.resolve(__dirname, `${t}.json`)
 , log  = a => console.log(a)
+, v    = `${t} version ${pkg.version}`
 
 const help = `\x1b[36m
   ${t}      # writes json in colour to your term
@@ -62,7 +63,7 @@ if (arg) {
     case '-v':
     case '--version':
     case 'version':
-      log(`${t} version ${pkg.version}`)
+      log(v)
       break
     case '-n':
     case 'names':
@@ -75,6 +76,7 @@ if (arg) {
       log(fl.status)
       break
     case '-w':
+    case '-u':
     case 'website':
     case 'url':
       log(fl.website)
