@@ -12,6 +12,7 @@ const
 , fl   = require(`./${t}.json`)
 , me   = path.resolve(__dirname, `${t}.json`)
 , log  = a => console.log(a)
+, logJ = a => console.log(JSON.stringify(a, null, 2))
 , v    = `${t} version ${pkg.version}`
 
 const help = `\x1b[36m
@@ -68,7 +69,7 @@ if (arg) {
     case '-n':
     case 'names':
     case 'name':
-      log(fl.names)
+      logJ(fl.names)
       break
     case '-s':
     case 'status':
@@ -89,11 +90,11 @@ if (arg) {
     case '-p':
     case 'projects':
     case 'work':
-      log(fl.projects)
+      logJ(fl.projects)
       break
     case '-l':
     case 'links':
-      log(fl.links)
+      logJ(fl.links)
       break
     default:
       log(help)
