@@ -1,7 +1,7 @@
 {
   "name": "zacanger",
   "description": "my cv, in json, in colour, in your terminal",
-  "version": "0.1.23",
+  "version": "0.1.24",
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
@@ -21,10 +21,14 @@
   },
   "bugs": "https://github.com/zacanger/zacanger/issues",
   "keywords": [
+    "api",
+    "cli",
     "color",
     "colour",
     "cv",
     "json",
+    "personal",
+    "rainbow",
     "resume",
     "terminal",
     "zacanger"

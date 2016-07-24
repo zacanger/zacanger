@@ -27,6 +27,7 @@ const help = `\x1b[36m
   ${t} -r | jq .projects[4].url
 \x1b[0m`
 
+// rainbow -- see npm.im/rainbowify
 const gencolors = () => {
   const colors = []
   for (let i = 0; i < (6 * 7); i++) {
@@ -40,9 +41,7 @@ const gencolors = () => {
   }
   return colors
 }
-
 const rainbowColors = gencolors()
-
 let colorIndex = 0
 const col = str => {
   const color = rainbowColors[colorIndex % rainbowColors.length]
@@ -50,10 +49,12 @@ const col = str => {
   return `\u001b[38;5;${color}m${str}\u001b[0m`
 }
 
+// runs the json through rainbow bit, writes to stdout
 const go = () =>
   fs.readFileSync(me).toString().split('\n').map(a =>
     out.write(col(a) + '\n'))
 
+// handle arguments and run
 if (arg) {
   switch (arg) {
     case '-r':
