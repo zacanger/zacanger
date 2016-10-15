@@ -61,7 +61,6 @@ if (arg) {
     case '--raw':
     case 'raw':
       return fs.createReadStream(me).pipe(out)
-      break
     case '-v':
     case '--version':
     case 'version':
@@ -99,7 +98,7 @@ if (arg) {
       break
     default:
       log(help)
-    }
+  }
 } else {
   return go()
 }
