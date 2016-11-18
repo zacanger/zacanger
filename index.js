@@ -2,18 +2,17 @@
 
 'use strict'
 
-const
-  fs   = require('fs')
-, path = require('path')
-, out  = process.stdout
-, arg  = process.argv[2]
-, pkg  = require('./package.json')
-, t    = pkg.name
-, fl   = require(`./${t}.json`)
-, me   = path.resolve(__dirname, `${t}.json`)
-, log  = a => console.log(a)
-, logJ = a => console.log(JSON.stringify(a, null, 2))
-, v    = `${t} version ${pkg.version}`
+const { readFileSync, createReadStream } = require('fs')
+const { resolve } = require('path')
+const out = process.stdout
+const arg = process.argv[2]
+const pkg = require('./package.json')
+const t = pkg.name
+const fl = require(`./${t}.json`)
+const me = resolve(__dirname, `${t}.json`)
+const log = a => console.log(a)
+const logJ = a => console.log(JSON.stringify(a, null, 2))
+const v = `${t} version ${pkg.version}`
 
 const help = `\x1b[36m
   ${t}      # writes json in colour to your term
@@ -51,7 +50,7 @@ const col = str => {
 
 // runs the json through rainbow bit, writes to stdout
 const go = () =>
-  fs.readFileSync(me).toString().split('\n').map(a =>
+  readFileSync(me).toString().split('\n').map(a =>
     out.write(col(a) + '\n'))
 
 // handle arguments and run
@@ -60,7 +59,7 @@ if (arg) {
     case '-r':
     case '--raw':
     case 'raw':
-      return fs.createReadStream(me).pipe(out)
+      return createReadStream(me).pipe(out)
     case '-v':
     case '--version':
     case 'version':
