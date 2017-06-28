@@ -49,9 +49,11 @@ const col = str => {
 }
 
 // runs the json through rainbow bit, writes to stdout
-const go = () =>
+const go = () => {
+  console.log('\x1Bc')
   readFileSync(me).toString().split('\n').map(a =>
-    out.write(col(a) + '\n'))
+      out.write(col(a) + '\n'))
+}
 
 // handle arguments and run
 if (arg) {
