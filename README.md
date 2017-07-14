@@ -11,7 +11,7 @@ installation: `npm i -g zacanger`
   zacanger -u   # website
   zacanger -p   # projects
                 # example:
-  zacanger -r | jq .links[3].url
+  zacanger -r | jq .links[9].url
 ```
 
 to do something similar for yourself, just fork it and replace `zacanger.json` with

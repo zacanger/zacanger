@@ -23,7 +23,7 @@ const help = `\x1b[36m
   ${t} -u   # website
   ${t} -p   # projects
                 # example:
-  ${t} -r | jq .links[3].url
+  ${t} -r | jq .links[9].url
 \x1b[0m`
 
 // rainbow -- see npm.im/rainbowify
