@@ -1,6 +1,10 @@
 # <http://zacanger.com/cv>
 
-installation: `npm i -g zacanger`
+## Usage
+
+`npx zacanger`
+
+Or, if you want to install globally, `npm i -g zacanger`
 
 ```
   zacanger      # writes json in colour to your term
@@ -14,7 +18,7 @@ installation: `npm i -g zacanger`
   zacanger -r | jq .links[9].url
 ```
 
-to do something similar for yourself, just fork it and replace `zacanger.json` with
+To do something similar for yourself, just fork it and replace `zacanger.json` with
 your own content, and change the name in `package.json`.
 
-using functions from [rainbowify](https://github.com/maxogden/rainbowify) for colors
+Using functions from [rainbowify](https://github.com/maxogden/rainbowify) for colors.
