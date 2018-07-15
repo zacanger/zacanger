@@ -8,7 +8,7 @@
   "website": "http://zacanger.com",
   "avatar": "http://zacanger.com/logo.svg",
   "writing": "http://zacanger.com/blog",
-  "summary": "Web and Linux enthusaist with experience with a broad range of technologies. Interested in environments that encourage constant learning and professional growth. Passionate about building better interfaces and smoother processes, and keeping software and development free and open.",
+  "summary": "Web and Linux enthusiast with experience with a broad range of technologies. Interested in environments that encourage constant learning and professional growth. Passionate about building better interfaces and smoother processes, and keeping software and development free and open.",
   "projects": [
     {
       "name": "lnx",
@@ -31,11 +31,6 @@
       "summary": "Dev server with nifty extras and easy config and API."
     },
     {
-      "name": "hyperterm-mild-dark",
-      "url": "http://npm.im/hyperterm-mild-dark",
-      "summary": "Mild dark theme for the HyperTerm terminal"
-    },
-    {
       "name": "angrplayr",
       "url": "http://npm.im/angrplayr",
       "summary": "Console music player in Node."
@@ -53,7 +48,7 @@
     {
       "name": "z",
       "url": "https://github.com/zacanger/z.git",
-      "summary": "My own configuration files, scripts, cheatsheets, and manpages."
+      "summary": "$HOME"
     },
     {
       "name": "Loonaverse.co",
@@ -131,6 +126,7 @@
       "clojure(script)",
       "haskell",
       "python",
+      "go",
       "ruby",
       "scheme (racket)",
       "'soft' skills"
