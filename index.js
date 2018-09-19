@@ -12,19 +12,11 @@ if (module.parent) {
   const fl = require(`./${t}.json`)
   const me = resolve(__dirname, `${t}.json`)
   const log = a => console.log(a)
-  const logJ = a => console.log(JSON.stringify(a, null, 2))
-  const v = `${t} version ${pkg.version}`
 
   const help = `\x1b[36m
     ${t}      # writes json in colour to your term
     ${t} -r   # writes raw json (for redirection or pipe)
     ${t} -h   # this help message
-    ${t} -b   # blog link
-    ${t} -n   # names
-    ${t} -u   # website
-    ${t} -p   # projects
-                  # example:
-    ${t} -r | jq .links[9].url
   \x1b[0m`
 
   // rainbow -- see npm.im/rainbowify
@@ -63,41 +55,6 @@ if (module.parent) {
       case '--raw':
       case 'raw':
         return createReadStream(me).pipe(out)
-      case '-v':
-      case '--version':
-      case 'version':
-        log(v)
-        break
-      case '-n':
-      case 'names':
-      case 'name':
-        logJ(fl.names)
-        break
-      case '-s':
-      case 'status':
-      case 'employed':
-        log(fl.status)
-        break
-      case '-w':
-      case '-u':
-      case 'website':
-      case 'url':
-        log(fl.website)
-        break
-      case '-b':
-      case 'blog':
-      case 'writing':
-        log(fl.writing)
-        break
-      case '-p':
-      case 'projects':
-      case 'work':
-        logJ(fl.projects)
-        break
-      case '-l':
-      case 'links':
-        logJ(fl.links)
-        break
       default:
         log(help)
     }
