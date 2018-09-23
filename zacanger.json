@@ -49,7 +49,7 @@
       "name": "Jane.com",
       "position": "Frontend Developer, Software Engineer, Infrastructure Engineer",
       "dates": "2018-Present",
-      "summary": "Worked on product teams building front-end apps including the React re-write of Jane.com and internal apps. Worked on infrastructure teams on deployments, CI/CD, and testing.",
+      "summary": "Worked on product teams building front-end apps including the React re-write of Jane.com and internal apps. Worked on infrastructure teams on CI/CD, monitoring, testing, and developer tooling.",
       "technologies": "React, CSS and Styled-Components, Linux, Koa, Express, Redux, AWS, Docker, Graphql and Apollo, Flow, Typescript, NGINX, Angular, TeamCity, CircleCI."
     },
     {
