@@ -5,7 +5,7 @@
   "author": {
     "name": "Zac Anger",
     "email": "zac@zacanger.com",
-    "url": "http://zacanger.com"
+    "url": "https://zacanger.com"
   },
   "license": "MIT",
   "main": "index.js",
@@ -14,7 +14,7 @@
   "scripts": {
     "start": "node index"
   },
-  "homepage": "http://zacanger.com/cv",
+  "homepage": "https://zacanger.com/cv",
   "repository": {
     "type": "git",
     "url": "https://github.com/zacanger/zacanger.git"
