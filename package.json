@@ -1,6 +1,6 @@
 {
   "name": "zacanger",
-  "description": "my cv, in json, in colour, in your terminal",
+  "description": "My business card",
   "version": "2.0.0",
   "author": {
     "email": "zac@zacanger.com",
@@ -23,10 +23,8 @@
   },
   "bugs": "https://github.com/zacanger/zacanger/issues",
   "keywords": [
-    "api",
+    "business-card",
     "cli",
-    "color",
-    "colour",
     "cv",
     "json",
     "personal",
