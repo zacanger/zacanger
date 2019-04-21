@@ -26,10 +26,8 @@
     "business-card",
     "cli",
     "cv",
-    "json",
     "personal",
     "resume",
-    "terminal",
     "zacanger"
   ],
   "dependencies": {
