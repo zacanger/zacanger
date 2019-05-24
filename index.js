@@ -10,7 +10,7 @@ const zac = {
   GitHub: 'https://github.com/zacanger',
   Twitter: 'https://twitter.com/zacanger',
   LinkedIn: 'https://linkedin.com/in/zacanger',
-  Email: 'zac@zacanger.com',
+  Email: 'zac@zacanger.com'
 }
 
 const divider = '-'.repeat(42)
