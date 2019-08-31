@@ -6,4 +6,4 @@ My business card
 
 `npx zacanger`
 
-License: [MIT](./LICENSE.md)
+[LICENSE](./LICENSE.md)
