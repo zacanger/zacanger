@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const colors = require('zeelib/lib/colorize')
+const colors = require('zeelib/lib/colorize').default
 
 const zac = {
   Name: 'Zac Anger',
