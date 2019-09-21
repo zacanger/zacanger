@@ -22,7 +22,7 @@ ${colors.green(zac.Title)}
 ${colors.blue(divider)}
 ${Object.keys(zac)
     .reduce((p, c) =>
-      [ 'Name', 'Title' ].includes(c)
+      ['Name', 'Title'].includes(c)
         ? p + ''
         : p + `${colors.bold(c)}: ${colors.yellow(zac[c])}\n`, ''
     ).trim()
