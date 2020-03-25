@@ -10,7 +10,7 @@ const zac = {
   GitHub: 'https://github.com/zacanger',
   Twitter: 'https://twitter.com/zacanger',
   LinkedIn: 'https://linkedin.com/in/zacanger',
-  Email: 'zac@zacanger.com'
+  Email: 'zac@zacanger.com',
 }
 
 const divider = '-'.repeat(42)
@@ -21,16 +21,20 @@ ${colors.green(zac.Name)}
 ${colors.green(zac.Title)}
 ${colors.blue(divider)}
 ${Object.keys(zac)
-    .reduce((p, c) =>
+  .reduce(
+    (p, c) =>
       ['Name', 'Title'].includes(c)
         ? p + ''
-        : p + `${colors.bold(c)}: ${colors.yellow(zac[c])}\n`, ''
-    ).trim()
-}
+        : p + `${colors.bold(c)}: ${colors.yellow(zac[c])}\n`,
+    ''
+  )
+  .trim()}
 ${colors.bold(colors.blue(divider))}
-`.trim()
+`
+  .trim()
   .split('\n')
-  .reduce((p, c) => p + `    ${c}\n`, '').trimEnd()
+  .reduce((p, c) => p + `    ${c}\n`, '')
+  .trimEnd()
 
 const main = () => {
   console.log(infoString)
