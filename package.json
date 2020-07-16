@@ -35,15 +35,15 @@
     "zacanger"
   ],
   "dependencies": {
-    "zeelib": "11.1.0"
+    "zeelib": "11.1.2"
   },
   "devDependencies": {
-    "eslint": "7.2.0",
-    "eslint-plugin-zacanger": "2.0.3",
+    "eslint": "7.4.0",
+    "eslint-plugin-zacanger": "2.0.4",
     "husky": "4.2.5",
-    "lint-staged": "10.2.10",
+    "lint-staged": "10.2.11",
     "prettier": "2.0.5",
-    "sortpack": "2.1.5"
+    "sortpack": "2.1.6"
   },
   "engines": {
     "node": ">=10.0.0"
