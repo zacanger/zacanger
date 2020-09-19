@@ -17,7 +17,7 @@ Email: zac@zacanger.com
 
 ![GitHub stats](https://github-readme-stats.vercel.app/api?username=zacanger&show_icons=true&theme=gruvbox)
 
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=zacanger&layout=compact&theme=gruvbox&hide=html,css,javascript)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=zacanger&layout=compact&theme=gruvbox&hide=html)](https://github.com/anuraghazra/github-readme-stats)
 
 [![Years Active](https://badges.pufler.dev/years/zacanger)](https://badges.pufler.dev) [![Repos](https://badges.pufler.dev/repos/zacanger)](https://badges.pufler.dev) [![Commits This Month](https://badges.pufler.dev/commits/monthly/zacanger)](https://badges.pufler.dev)
 
