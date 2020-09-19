@@ -4,7 +4,7 @@ const colors = require('zeelib/lib/colorize').default
 
 const zac = {
   Name: 'Zac Anger',
-  Title: 'Infrastructure & Software Engineer',
+  Title: 'Senior DevOps Engineer',
   Web: 'https://zacanger.com',
   CV: 'https://zacanger.com/cv',
   GitHub: 'https://github.com/zacanger',
