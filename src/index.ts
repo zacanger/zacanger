@@ -1,5 +1,14 @@
 // @ts-nocheck
-import colors from 'zeelib/lib/colorize'
+import colorize from 'zeelib/lib/colorize'
+
+const id = (a) => a
+const colors = process.stdout.isTTY
+  ? colorize
+  : Object.keys(colorize).reduce((prev, curr) => {
+      // eslint-disable-next-line fp/no-mutation
+      prev[curr] = id
+      return prev
+    }, {})
 
 export const zac = {
   Name: 'Zac Anger',
