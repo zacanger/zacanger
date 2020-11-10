@@ -1,14 +1,23 @@
 // @ts-nocheck
 import colorize from 'zeelib/lib/colorize'
 
-const id = (a) => a
-const colors = process.stdout.isTTY
+const id = <T>(a: T): T => a
+type Colors = {
+  blue: (s: string) => string
+  bold: (s: string) => string
+  green: (s: string) => string
+  yellow: (s: string) => string
+}
+
+const colors: Colors = process.stdout.isTTY
   ? colorize
   : Object.keys(colorize).reduce((prev, curr) => {
       // eslint-disable-next-line fp/no-mutation
       prev[curr] = id
       return prev
     }, {})
+
+const indent = process.stdout.isTTY ? '    ' : ''
 
 export const zac = {
   Name: 'Zac Anger',
@@ -40,7 +49,7 @@ ${colors.bold(colors.blue(divider))}
 `
   .trim()
   .split('\n')
-  .reduce((p, c) => p + `    ${c}\n`, '')
+  .reduce((p, c) => p + `${indent}${c}\n`, '')
   .trimEnd()
 
 export const main = () => {
