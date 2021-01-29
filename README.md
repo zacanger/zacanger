@@ -10,8 +10,6 @@ Senior DevOps Engineer
 Web: https://zacanger.com
 CV: https://zacanger.com/cv
 GitHub: https://github.com/zacanger
-LinkedIn: https://linkedin.com/in/zacanger
-Email: zac@zacanger.com
 ------------------------------------------
 ```
 
