@@ -1,7 +1,7 @@
 {
   "name": "zacanger",
   "description": "My business card",
-  "version": "3.0.17",
+  "version": "3.0.18",
   "author": {
     "email": "zac@zacanger.com",
     "name": "Zac Anger",
@@ -18,7 +18,9 @@
     "lib"
   ],
   "preferGlobal": true,
-  "bin": "index.js",
+  "bin": {
+    "zacanger": "index.js"
+  },
   "scripts": {
     "build": "tsc",
     "prebuild": "npm t",
