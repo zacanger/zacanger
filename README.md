@@ -5,7 +5,7 @@
 ```
 ------------------------------------------
 Zac Anger
-Senior DevOps Engineer
+Software and DevOps Engineer
 ------------------------------------------
 Web: https://zacanger.com
 CV: https://zacanger.com/cv
