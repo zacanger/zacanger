@@ -1,12 +1,26 @@
 #!/usr/bin/env node
 
-const colorize = require('zeelib/lib/colorize').default
+const { inspect } = require('util')
+
 const id = (a) => a
 const isTty = process.stdout.isTTY
 
+const cols = (color, text) => {
+  const codes = inspect.colors[color]
+  return `\x1b[${codes[0]}m${text}\x1b[${codes[1]}m`
+}
+
+const colorize = () => {
+  const val = {}
+  Object.keys(inspect.colors).forEach((color) => {
+    val[color] = (text) => cols(color, text)
+  })
+  return val
+}
+
 const colors = isTty
-  ? colorize
-  : Object.keys(colorize).reduce((prev, curr) => {
+  ? colorize()
+  : Object.keys(inspect.colors).reduce((prev, curr) => {
     prev[curr] = id
     return prev
   }, {})
