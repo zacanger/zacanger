@@ -63,8 +63,8 @@ const main = () => {
   console.log(infoString)
 }
 
-if (module.parent) {
-  module.exports = zac
-} else {
+if (require.main === module) {
   main()
+} else {
+  module.exports = zac
 }
