@@ -25,13 +25,13 @@ const colors = isTty
     return prev
   }, {})
 
-const indent = isTty ? '    ' : ''
+const indent = isTty ? '  ' : ''
 
 const zac = {
   Name: 'Zac Anger',
-  Title: 'Software and DevOps Engineer, Musician',
+  Title: 'Senior Software Engineer',
   Web: 'https://zacanger.com',
-  CV: 'https://zacanger.com/cv',
+  Resume: 'https://zacanger.com/resume',
   GitHub: 'https://github.com/zacanger'
 }
 

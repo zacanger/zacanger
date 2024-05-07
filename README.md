@@ -5,10 +5,10 @@
 ```
 ------------------------------------------
 Zac Anger
-Software and DevOps Engineer, Musician
+Senior Software Engineer
 ------------------------------------------
 Web: https://zacanger.com
-CV: https://zacanger.com/cv
+Resume: https://zacanger.com/resume
 GitHub: https://github.com/zacanger
 ------------------------------------------
 ```

@@ -36,7 +36,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "sortpack": "2.3.4",
+    "sortpack": "2.4.0",
     "standard": "17.1.0"
   },
   "engines": {
